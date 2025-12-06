@@ -10,7 +10,7 @@
 </head>
 
 <body>
-    <div class="mascara-formulario"></div>
+    <div onclick="esconderForm()" class="mascara-formulario"></div>
 
     <div class="header" alt="logo mario">
         <img src="./img/logo-header.png">
@@ -31,7 +31,7 @@
                 vocês
                 os encanadores mais famosos do Reino dos Cogumelos - Mario e Luigi!</p>
 
-            <button>Entre em contato</button>
+            <button onclick="mostrarForm()">Entre em contato</button>
         </div>
 
         <div>
@@ -48,13 +48,16 @@
         <img src="./img/whatsapp.png" alt="link para o whatsapp">
     </a>
 
-    <form class="formulario-fale-conosco">
-        <input type="text" placeholder="Seu nome">
-        <input type="text" placeholder="Seu telefone">
-        <textarea placeholder="Digite seu problema aqui"></textarea>
-        <button>Pedir Orçamento</button>
+    <form class="formulario-fale-conosco"
+    action="https://formcarry.com/s/LhQ_rXYkhj6"
+    method="POST"
+    enctype="multipart/form-data">
+        <input type="text" name="nome" placeholder="Seu nome" required>
+        <input type="tel" name="telefone" placeholder="Seu telefone" required>
+        <textarea name="duvida" placeholder="Digite seu problema aqui" required></textarea>
+        <button type="submit">Pedir Orçamento</button>
     </form>
-
 </body>
+<script src="scripts.js"></script>
 
 </html>
